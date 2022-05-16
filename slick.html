@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick-theme.css">
+</head>
+<style>
+    img{
+        width: 100%;
+        height: 400px;object-fit: cover;
+    }
+    .slick-next:before{
+        color: aqua;
+    }
+    .slick-prev:before{
+        color: rgb(123, 255, 0);
+    }
+</style>
+<body class="bg-dark">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="your-class">
+                    <div class="card">
+                        <div >
+                            <img src="./New folder/1.jpg"class="rounded shadow" alt="" srcset=""></div>
+                    </div>
+                    <div class="card">
+                        <div >
+                            <img src="./New folder/2.jpg" alt="" srcset=""></div>
+                    </div>
+                    <div class="card">
+                        <div >
+                            <img src="./New folder/3.jpg" alt="" srcset=""></div>
+                    </div>  
+                 
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/slick-carousel/slick/slick.min.js"></script>
+
+<script>
+    
+$('.your-class').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 500,
+  cssEase: 'linear',
+
+  slidesToScroll: 1,
+  fade: true,
+  
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+})
+</script>
+
+
+</body>
+</html>
